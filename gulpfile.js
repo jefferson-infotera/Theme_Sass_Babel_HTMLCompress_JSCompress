@@ -59,7 +59,7 @@ function developingJs() {
 
 /* Watch */
 function observer() {
-    watch('src/*.html', buildHtmlmin)
+    watch(['src/*.html', 'src/**/*.html'], buildHtmlmin)
     watch('src/assets/img/*.*', moveFiles)
     watch(['src/assets/sass/**'], buildSass)
     watch('src/assets/js/**/*.js', developingJs)
@@ -68,4 +68,3 @@ function observer() {
 // exports.sass = buildSass;
 exports.build = series(buildSass, buildJs, buildHtmlmin, moveFiles);
 exports.start = series(buildSass, developingJs, buildHtmlmin, moveFiles, observer);
-

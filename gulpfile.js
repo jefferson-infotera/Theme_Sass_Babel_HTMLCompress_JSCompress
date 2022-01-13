@@ -10,6 +10,7 @@ const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
+const fileinclude = require('gulp-file-include');
 
 
 /* Production */
@@ -22,6 +23,10 @@ function buildSass() {
 
 function buildHtmlmin() {
     return gulp.src('src/*.html')
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist'));
 }

@@ -9,6 +9,7 @@ Ola! me chamo **Jefferson Oliveira** e criei este tema com o **Gulp** para proje
  - Sass  ( **gulp-sass** )
  - HTML Minificador ( **gulp-htmlmin** )
  - JS Minificador ( **gulp-uglify** )
+ - File Include (**gulp-file-include**)
 
  # Instação do tema
 Requisitos mínimos: 
@@ -50,6 +51,7 @@ Dica: Utilizar o seguinte plugin no VSCode **Live Server** e rodar o comando `gu
 │   ├── index.html                      # → Página inicial (html nesta camada)
 │   └── assets/                         # → Arquivos auxiliares
 │       ├── img/                        # → Todas imagens
+│       │   └── svg/               		# → Todos os arquivos svgs (Seguir Modelo de utilização abaixo)
 │       ├── js/                         # → Todos os Javascript
 │       │   ├── components/             # → Componentes
 │       │   └── views/                  # → Telas
@@ -68,3 +70,30 @@ Dica: Utilizar o seguinte plugin no VSCode **Live Server** e rodar o comando `gu
 
 - Utilizei a arquitetura para o Sass conhecida como **padrão 7-1** .
 	> Fique a vontade para criar arquivos dentro da de /sass.
+
+# Modelo de Utilização pasta SVG
+
+Dentro da pasta svg temos que seguir alguns modelos de utilização pois se seguido da forma correta não teremos que adicionar o svg diretamento no nosso html e sim importante o svg para lá na hora da compilação deixando o html mais limpo no desenvolvimento.
+
+```sh
+# Cria seu svg da seguinte maneira
+# Tag obrigatorio SYMBOL
+
+<svg>
+    <symbol id="ID_ICON">
+        // Código do iconE
+    </symbol>
+</svg>
+
+# Agora no HTML Importe o icone e use 
+<body>
+	
+	@@include_once('./assets/img/svg/ICON.SVG')
+
+	<svg> 
+		<use xlink:href="#ID_ICON" />
+	</svg> 
+
+</body>
+
+``` 

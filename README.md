@@ -5,7 +5,6 @@ Ola! me chamo **Jefferson Oliveira** e criei este tema com o **Gulp** para proje
  - HTML
  - CSS
  - Javascript
- - Babel
  - Babel 7
  - Sass  ( **gulp-sass** )
  - HTML Minificador ( **gulp-htmlmin** )
@@ -13,11 +12,20 @@ Ola! me chamo **Jefferson Oliveira** e criei este tema com o **Gulp** para proje
 
  # Instação do tema
 Requisitos mínimos: 
-`node` *testado na versão **10.19.0***
+
+```sh
+# Node *testado na versão **10.19.0***
+$ node --version
+```
+
+```sh
+# gulp instalação caso não tenha
+$ npm install --global gulp-cli
+```
 
 ```sh
 # Dentro da pasta do projeto na raiz execute
-$ npm install
+$ gulp install
 ```
 
 Agora seu projeto já esta configurado

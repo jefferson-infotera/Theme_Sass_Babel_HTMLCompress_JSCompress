@@ -1,4 +1,4 @@
-# Projetos Front-End Tema
+# Theme Front-End
 
 Ola! me chamo **Jefferson Oliveira** e criei este tema com o **Gulp** para projetos que utilizam as seguintes tecnologias:
 

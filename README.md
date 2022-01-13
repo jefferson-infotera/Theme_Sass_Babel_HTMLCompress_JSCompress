@@ -25,7 +25,7 @@ $ npm install --global gulp-cli
 
 ```sh
 # Dentro da pasta do projeto na raiz execute
-$ gulp install
+$ npm install
 ```
 
 Agora seu projeto já esta configurado
